@@ -167,7 +167,7 @@ function DownloadCard({ d, isDetected }) {
   return (
     <a
       href={d.href}
-      target="_blank" rel="noopener noreferrer"
+      download
       style={{
         display: "flex", alignItems: "center", gap: 16, padding: "18px 22px",
         background: isDetected ? "rgba(124,58,237,0.15)" : "rgba(255,255,255,0.04)",
@@ -264,7 +264,7 @@ export default function Home() {
       <nav className="nav">
         <div className="container nav-inner">
           <a href="/" className="nav-logo">⬇ Any Downloader</a>
-          {!isMobile && <a href={primaryHref} target="_blank" rel="noopener noreferrer" className="nav-btn">Download Free</a>}
+          {!isMobile && <a href={primaryHref} download className="nav-btn">Download Free</a>}
         </div>
       </nav>
 
@@ -289,7 +289,7 @@ export default function Home() {
 
             {/* ── Primary CTA (matches detected OS) ── */}
             {!isMobile ? (
-              <a href={primaryHref} target="_blank" rel="noopener noreferrer" className="download-btn">
+              <a href={primaryHref} download className="download-btn">
                 <div className="shimmer" />
                 <span className="btn-icon">⬇</span>
                 {primaryLabel}
@@ -402,7 +402,7 @@ export default function Home() {
               <div className="seo-visual">
                 <div className="big-icon">{s.icon}</div>
                 <p>{s.iconLabel}</p>
-                {!isMobile && <a href={primaryHref} target="_blank" rel="noopener noreferrer" className="nav-btn" style={{ marginTop: 8 }}>Download Free</a>}
+                {!isMobile && <a href={primaryHref} download className="nav-btn" style={{ marginTop: 8 }}>Download Free</a>}
               </div>
             </div>
           </div>
@@ -440,12 +440,12 @@ export default function Home() {
             <p>Join thousands of users who trust Any Downloader to save YouTube, Facebook, Instagram and TikTok videos every day. Available on macOS, Windows, and Linux.</p>
             {!isMobile ? (
               <>
-                <a href={primaryHref} target="_blank" rel="noopener noreferrer" className="download-btn" style={{ marginBottom: 24 }}>
+                <a href={primaryHref} download className="download-btn" style={{ marginBottom: 24 }}>
                   <div className="shimmer" /><span className="btn-icon">⬇</span>{primaryLabel}
                 </a>
                 <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
                   {DOWNLOADS.map((d) => (
-                    <a key={d.os} href={d.href} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 16px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, textDecoration: "none", color: "var(--text-muted)", fontSize: "0.8rem", fontWeight: 600 }}>
+                    <a key={d.os} href={d.href} download style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 16px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, textDecoration: "none", color: "var(--text-muted)", fontSize: "0.8rem", fontWeight: 600 }}>
                       {d.iconEmoji} {d.label} {d.sublabel} {d.ext}
                     </a>
                   ))}
@@ -475,7 +475,7 @@ export default function Home() {
               <span>TikTok Downloader</span>
             </div>
             <div className="footer-links">
-              {!isMobile && <a href={primaryHref} target="_blank" rel="noopener noreferrer">Download</a>}
+              {!isMobile && <a href={primaryHref} download>Download</a>}
               <a href="#faq">FAQ</a>
             </div>
             <p className="footer-copy">© {new Date().getFullYear()} Any Downloader. Free &amp; Open Source. macOS · Windows · Linux.</p>

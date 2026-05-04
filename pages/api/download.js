@@ -1,16 +1,14 @@
 /**
  * Download redirect API
  *
- * Uses standard Google Drive preview links because Google Drive
- * now requires dynamic confirmation tokens to bypass the antivirus
- * warning on files larger than 100MB or executables.
+ * Redirects to the latest GitHub Release assets for Any Downloader.
  */
 const URLS = {
-  "mac-arm64":   "https://drive.google.com/file/d/1wExpCwwrCrQJDC6OBs2v3zIVeOa1aufC/view",
-  "mac-x64":     "https://drive.google.com/file/d/1EnyIDx-kGwy_jbK-Ehd0Yc6k9x9h_abm/view",
-  "windows":     "https://drive.google.com/file/d/1ffawXlhHAelPBEwQNo0amn6GAMe1pQME/view",
-  "linux-x64":   "https://drive.google.com/file/d/1HnkhP_EgWhFvn0GtyvOcHagp8EavxzuU/view",
-  "linux-arm64": "https://drive.google.com/file/d/1CPVK-pcAY3A6_LDMrsRzhxYHTExg2HdT/view",
+  "mac-arm64":   "https://github.com/golamrabbani3587/anydownloader/releases/download/app/Any.Downloader-1.0.0-arm64.dmg",
+  "mac-x64":     "https://github.com/golamrabbani3587/anydownloader/releases/download/app/Any.Downloader-1.0.0.dmg",
+  "windows":     "https://github.com/golamrabbani3587/anydownloader/releases/download/app/Any.Downloader.Setup.1.0.0.exe",
+  "linux-x64":   "https://github.com/golamrabbani3587/anydownloader/releases/download/app/any-downloader_1.0.0_amd64.deb",
+  "linux-arm64": "https://github.com/golamrabbani3587/anydownloader/releases/download/app/any-downloader_1.0.0_arm64.deb",
 };
 
 export default function handler(req, res) {
