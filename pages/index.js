@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 
 const SITE_NAME = "Any Downloader";
-const SITE_URL = "https://anydownloader.app";
+const SITE_URL = "https://anydownloader.vercel.app";
 const APP_VERSION = "1.0.0";
 
 const META_TITLE =
@@ -254,6 +254,8 @@ export default function Home() {
         <meta property="og:title" content={META_TITLE} />
         <meta property="og:description" content={META_DESC} />
         <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content={SITE_NAME} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={META_TITLE} />
