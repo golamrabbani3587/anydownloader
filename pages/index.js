@@ -22,6 +22,7 @@ const JSON_LD = {
   description: META_DESC,
   url: SITE_URL,
   downloadUrl: `${SITE_URL}/api/download`,
+  image: `${SITE_URL}/og-image.png`,
   softwareVersion: APP_VERSION,
   aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", ratingCount: "2847" },
 };
@@ -246,6 +247,7 @@ export default function Home() {
         <meta name="description" content={META_DESC} />
         <meta name="keywords" content={META_KEYWORDS} />
         <meta name="robots" content="index, follow" />
+        <link rel="icon" href="/favicon.png" />
         <link rel="canonical" href={SITE_URL} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={SITE_URL} />
@@ -263,7 +265,10 @@ export default function Home() {
       {/* ── NAV ── */}
       <nav className="nav">
         <div className="container nav-inner">
-          <a href="/" className="nav-logo">⬇ Any Downloader</a>
+          <a href="/" className="nav-logo" style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <img src="/favicon.png" alt="Logo" style={{ width: 32, height: 32, borderRadius: 8 }} />
+            <span className="gradient-text">Any Downloader</span>
+          </a>
           {!isMobile && <a href={primaryHref} download className="nav-btn">Download Free</a>}
         </div>
       </nav>
@@ -467,7 +472,10 @@ export default function Home() {
       <footer>
         <div className="container">
           <div className="footer-inner">
-            <div className="footer-logo">⬇ Any Downloader</div>
+            <div className="footer-logo" style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <img src="/favicon.png" alt="Logo" style={{ width: 28, height: 28, borderRadius: 6 }} />
+              <span className="gradient-text">Any Downloader</span>
+            </div>
             <div className="footer-platforms">
               <span>YouTube Downloader</span><span>•</span>
               <span>Facebook Video Downloader</span><span>•</span>
