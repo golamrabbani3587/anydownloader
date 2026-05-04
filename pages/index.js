@@ -26,15 +26,17 @@ const JSON_LD = {
   softwareVersion: APP_VERSION,
   aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", ratingCount: "2847" },
 };
+//
+
 
 // ── Apple SVG icon (apple shape with bite + leaf) ───────────
 function AppleIcon({ size = 32, color = "#f1f5f9" }) {
   return (
     <svg width={size} height={size} viewBox="0 0 814 1000" fill={color} xmlns="http://www.w3.org/2000/svg">
       {/* Leaf */}
-      <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105.5-57.9-155.5-127.4C46 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.1 0 128.4 46.4 172.5 46.4 42.8 0 109.6-49 192.5-49 30.8 0 134.2 2.6 198.3 99z"/>
+      <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105.5-57.9-155.5-127.4C46 790.7 0 663 0 541.8c0-207.5 135.4-317.3 269-317.3 70.1 0 128.4 46.4 172.5 46.4 42.8 0 109.6-49 192.5-49 30.8 0 134.2 2.6 198.3 99z" />
       {/* Stem/leaf on top */}
-      <path d="M549.7 85.5C583 49.1 608.5 0 608.5 0s-4.9 0-7.1.6c-31.4 9.6-79.5 44.5-105.7 77.5-23.3 29.5-44.5 80.2-44.5 128.8 0 4.5.6 9 1.3 11.6 2.6.6 6.5 1.3 10.4 1.3 28.2 0 75.7-37.7 87.4-74.9 3.2-9.7 3.9-14.8 3.9-14.8-9.7-7.2-6.5-44.6-4.5-44.6z"/>
+      <path d="M549.7 85.5C583 49.1 608.5 0 608.5 0s-4.9 0-7.1.6c-31.4 9.6-79.5 44.5-105.7 77.5-23.3 29.5-44.5 80.2-44.5 128.8 0 4.5.6 9 1.3 11.6 2.6.6 6.5 1.3 10.4 1.3 28.2 0 75.7-37.7 87.4-74.9 3.2-9.7 3.9-14.8 3.9-14.8-9.7-7.2-6.5-44.6-4.5-44.6z" />
     </svg>
   );
 }
@@ -43,7 +45,7 @@ function AppleIcon({ size = 32, color = "#f1f5f9" }) {
 function WindowsIcon({ size = 32 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.026 45.7zm4.326-39.025L87.314 0v41.527l-47.318.376zm47.329 39.349l-.011 41.34-47.318-6.678-.066-34.739z" fill="#00adef"/>
+      <path d="M0 12.402l35.687-4.86.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.026 45.7zm4.326-39.025L87.314 0v41.527l-47.318.376zm47.329 39.349l-.011 41.34-47.318-6.678-.066-34.739z" fill="#00adef" />
     </svg>
   );
 }
@@ -52,17 +54,17 @@ function WindowsIcon({ size = 32 }) {
 function LinuxIcon({ size = 32 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="24" cy="16" rx="10" ry="13" fill="#f1c40f"/>
-      <ellipse cx="24" cy="16" rx="7" ry="10" fill="#2c3e50"/>
-      <circle cx="20" cy="13" r="2" fill="#f1f5f9"/>
-      <circle cx="28" cy="13" r="2" fill="#f1f5f9"/>
-      <circle cx="20.5" cy="13.5" r="1" fill="#2c3e50"/>
-      <circle cx="28.5" cy="13.5" r="1" fill="#2c3e50"/>
-      <ellipse cx="24" cy="20" rx="4" ry="2" fill="#e67e22"/>
-      <rect x="14" y="28" width="20" height="12" rx="4" fill="#f1c40f"/>
-      <ellipse cx="24" cy="30" rx="8" ry="6" fill="#f1c40f"/>
-      <rect x="10" y="38" width="8" height="6" rx="2" fill="#f1c40f"/>
-      <rect x="30" y="38" width="8" height="6" rx="2" fill="#f1c40f"/>
+      <ellipse cx="24" cy="16" rx="10" ry="13" fill="#f1c40f" />
+      <ellipse cx="24" cy="16" rx="7" ry="10" fill="#2c3e50" />
+      <circle cx="20" cy="13" r="2" fill="#f1f5f9" />
+      <circle cx="28" cy="13" r="2" fill="#f1f5f9" />
+      <circle cx="20.5" cy="13.5" r="1" fill="#2c3e50" />
+      <circle cx="28.5" cy="13.5" r="1" fill="#2c3e50" />
+      <ellipse cx="24" cy="20" rx="4" ry="2" fill="#e67e22" />
+      <rect x="14" y="28" width="20" height="12" rx="4" fill="#f1c40f" />
+      <ellipse cx="24" cy="30" rx="8" ry="6" fill="#f1c40f" />
+      <rect x="10" y="38" width="8" height="6" rx="2" fill="#f1c40f" />
+      <rect x="30" y="38" width="8" height="6" rx="2" fill="#f1c40f" />
     </svg>
   );
 }
@@ -229,14 +231,14 @@ export default function Home() {
   const primaryHref = detectedOS === "windows"
     ? "/api/download?os=windows"
     : detectedOS === "linux"
-    ? "/api/download?os=linux-x64"
-    : "/api/download?os=mac-arm64";
+      ? "/api/download?os=linux-x64"
+      : "/api/download?os=mac-arm64";
 
   const primaryLabel = detectedOS === "windows"
     ? "Download for Windows — Free"
     : detectedOS === "linux"
-    ? "Download for Linux — Free"
-    : "Download for macOS — Free";
+      ? "Download for Linux — Free"
+      : "Download for macOS — Free";
 
   return (
     <>
